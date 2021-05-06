@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-// npm i uuid - Libreria externa para asignar ID
+import { v4 as uuidv4 } from 'uuid'; // npm i uuid - Libreria externa para asignar ID
+import PropTypes from 'prop-types';
 
 const datosCita = {
 	mascota: '',
@@ -114,6 +114,10 @@ const Formulario = ({ crearCita }) => {
 			{error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
 		</>
 	);
+};
+
+Formulario.propTypes = {
+	crearCita: PropTypes.func.isRequired
 };
 
 export default Formulario;
